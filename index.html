@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Dining - Risma</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgm" loop>
+  <source src="candyrella.mp3" type="audio/mpeg">
+</audio>
+<button id="mbtn" onclick="toggleMusic()" style="position:fixed;top:20px;right:20px;z-index:9999;background:rgba(107,58,42,0.88);border:2px solid #F0ECD8;color:#F0ECD8;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.4);">&#127925;</button>
+<audio id="bgm" loop>
+  <source src="candyrella.mp3" type="audio/mpeg">
+</audio>
+<button id="mbtn" onclick="toggleMusic()" style="position:fixed;top:20px;right:20px;z-index:9999;background:rgba(107,58,42,0.88);border:2px solid #F0ECD8;color:#F0ECD8;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.4);">🎵</button>
+
+
+<!-- AUDIO: Candyrella - Paul Partohap -->
+<audio id="bgm" loop>
+  <source src="candyrella.mp3" type="audio/mpeg">
+</audio>
+
+<button id="mbtn" onclick="toggleMusic()" style="
+  position:fixed;top:20px;right:20px;z-index:9999;
+  background:rgba(107,58,42,0.88);
+  border:2px solid #F0ECD8;
+  color:#F0ECD8;
+  width:46px;height:46px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  backdrop-filter:blur(4px);
+  transition:background 0.2s;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+">&#127925;</button>
+
+
+
+
+<!-- S1: ENVELOPE -->
+<div class="slide col on" id="s1">
+  <div class="envwrap" id="ew">
+    <div class="env">
+      <div class="envbody"></div>
+      <svg class="envsvg" viewBox="0 0 460 300" preserveAspectRatio="none">
+        <line x1="0" y1="0"   x2="230" y2="150" stroke="#111" stroke-width="2.2"/>
+        <line x1="460" y1="0"   x2="230" y2="150" stroke="#111" stroke-width="2.2"/>
+        <line x1="0" y1="300" x2="230" y2="150" stroke="#111" stroke-width="2.2"/>
+        <line x1="460" y1="300" x2="230" y2="150" stroke="#111" stroke-width="2.2"/>
+      </svg>
+      <div class="envflap" id="ef"></div>
+      <button class="openbtn" id="ob" onclick="openEnv()">OPEN</button>
+    </div>
+  </div>
+</div>
+
+<!-- S2: OPEN ENV + STAMP -->
+<div class="slide" id="s2">
+  <div class="openv">
+    <div class="openvbody">
+      <svg class="openvsvg" viewBox="0 0 300 195" preserveAspectRatio="none">
+        <!-- cream bg -->
+        <rect width="300" height="195" fill="#F0ECD8"/>
+        <!-- diagonal lines -->
+        <line x1="0" y1="0"   x2="150" y2="97" stroke="#111" stroke-width="2"/>
+        <line x1="300" y1="0"   x2="150" y2="97" stroke="#111" stroke-width="2"/>
+        <line x1="0" y1="195" x2="150" y2="97" stroke="#111" stroke-width="2"/>
+        <line x1="300" y1="195" x2="150" y2="97" stroke="#111" stroke-width="2"/>
+        <!-- border -->
+        <rect width="300" height="195" fill="none" stroke="#111" stroke-width="2" rx="5"/>
+        <!-- brown open flap -->
+        <polygon points="0,0 300,0 150,90" fill="#6B3A2A"/>
+        <!-- flap outline -->
+        <polyline points="0,0 150,90 300,0" fill="none" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="stampwrap">
+    <svg width="295" height="415" viewBox="0 0 295 415" xmlns="http://www.w3.org/2000/svg"
+         style="filter:drop-shadow(0 12px 28px rgba(0,0,0,0.5));display:block;">
+      <defs>
+        <mask id="sm">
+          <rect width="295" height="415" fill="white"/>
+          <!-- top -->
+          <circle cx="9" cy="0" r="8" fill="black"/><circle cx="27" cy="0" r="8" fill="black"/>
+          <circle cx="45" cy="0" r="8" fill="black"/><circle cx="63" cy="0" r="8" fill="black"/>
+          <circle cx="81" cy="0" r="8" fill="black"/><circle cx="99" cy="0" r="8" fill="black"/>
+          <circle cx="117" cy="0" r="8" fill="black"/><circle cx="135" cy="0" r="8" fill="black"/>
+          <circle cx="153" cy="0" r="8" fill="black"/><circle cx="171" cy="0" r="8" fill="black"/>
+          <circle cx="189" cy="0" r="8" fill="black"/><circle cx="207" cy="0" r="8" fill="black"/>
+          <circle cx="225" cy="0" r="8" fill="black"/><circle cx="243" cy="0" r="8" fill="black"/>
+          <circle cx="261" cy="0" r="8" fill="black"/><circle cx="279" cy="0" r="8" fill="black"/>
+          <!-- bottom -->
+          <circle cx="9" cy="415" r="8" fill="black"/><circle cx="27" cy="415" r="8" fill="black"/>
+          <circle cx="45" cy="415" r="8" fill="black"/><circle cx="63" cy="415" r="8" fill="black"/>
+          <circle cx="81" cy="415" r="8" fill="black"/><circle cx="99" cy="415" r="8" fill="black"/>
+          <circle cx="117" cy="415" r="8" fill="black"/><circle cx="135" cy="415" r="8" fill="black"/>
+          <circle cx="153" cy="415" r="8" fill="black"/><circle cx="171" cy="415" r="8" fill="black"/>
+          <circle cx="189" cy="415" r="8" fill="black"/><circle cx="207" cy="415" r="8" fill="black"/>
+          <circle cx="225" cy="415" r="8" fill="black"/><circle cx="243" cy="415" r="8" fill="black"/>
+          <circle cx="261" cy="415" r="8" fill="black"/><circle cx="279" cy="415" r="8" fill="black"/>
+          <!-- left -->
+          <circle cx="0" cy="9" r="8" fill="black"/><circle cx="0" cy="27" r="8" fill="black"/>
+          <circle cx="0" cy="45" r="8" fill="black"/><circle cx="0" cy="63" r="8" fill="black"/>
+          <circle cx="0" cy="81" r="8" fill="black"/><circle cx="0" cy="99" r="8" fill="black"/>
+          <circle cx="0" cy="117" r="8" fill="black"/><circle cx="0" cy="135" r="8" fill="black"/>
+          <circle cx="0" cy="153" r="8" fill="black"/><circle cx="0" cy="171" r="8" fill="black"/>
+          <circle cx="0" cy="189" r="8" fill="black"/><circle cx="0" cy="207" r="8" fill="black"/>
+          <circle cx="0" cy="225" r="8" fill="black"/><circle cx="0" cy="243" r="8" fill="black"/>
+          <circle cx="0" cy="261" r="8" fill="black"/><circle cx="0" cy="279" r="8" fill="black"/>
+          <circle cx="0" cy="297" r="8" fill="black"/><circle cx="0" cy="315" r="8" fill="black"/>
+          <circle cx="0" cy="333" r="8" fill="black"/><circle cx="0" cy="351" r="8" fill="black"/>
+          <circle cx="0" cy="369" r="8" fill="black"/><circle cx="0" cy="387" r="8" fill="black"/>
+          <circle cx="0" cy="405" r="8" fill="black"/>
+          <!-- right -->
+          <circle cx="295" cy="9" r="8" fill="black"/><circle cx="295" cy="27" r="8" fill="black"/>
+          <circle cx="295" cy="45" r="8" fill="black"/><circle cx="295" cy="63" r="8" fill="black"/>
+          <circle cx="295" cy="81" r="8" fill="black"/><circle cx="295" cy="99" r="8" fill="black"/>
+          <circle cx="295" cy="117" r="8" fill="black"/><circle cx="295" cy="135" r="8" fill="black"/>
+          <circle cx="295" cy="153" r="8" fill="black"/><circle cx="295" cy="171" r="8" fill="black"/>
+          <circle cx="295" cy="189" r="8" fill="black"/><circle cx="295" cy="207" r="8" fill="black"/>
+          <circle cx="295" cy="225" r="8" fill="black"/><circle cx="295" cy="243" r="8" fill="black"/>
+          <circle cx="295" cy="261" r="8" fill="black"/><circle cx="295" cy="279" r="8" fill="black"/>
+          <circle cx="295" cy="297" r="8" fill="black"/><circle cx="295" cy="315" r="8" fill="black"/>
+          <circle cx="295" cy="333" r="8" fill="black"/><circle cx="295" cy="351" r="8" fill="black"/>
+          <circle cx="295" cy="369" r="8" fill="black"/><circle cx="295" cy="387" r="8" fill="black"/>
+          <circle cx="295" cy="405" r="8" fill="black"/>
+        </mask>
+      </defs>
+      <rect width="295" height="415" fill="#F0ECD8" mask="url(#sm)"/>
+      <rect x="13" y="13" width="269" height="389" fill="#6B3A2A"/>
+      <text x="24" y="38" font-family="Georgia,serif" font-size="12" fill="#F0ECD8" opacity="0.7" letter-spacing="1">For Risma</text>
+      <text x="147" y="86" font-family="Georgia,serif" font-size="31" font-weight="700" fill="#F0ECD8" text-anchor="middle">FINE DINING</text>
+      <text x="147" y="126" font-family="Georgia,serif" font-size="31" font-weight="700" fill="#F0ECD8" text-anchor="middle">INVITATION</text>
+      <text x="73"  y="236" font-size="40" text-anchor="middle">🍴</text>
+      <circle cx="147" cy="218" r="38" fill="none" stroke="#F0ECD8" stroke-width="3"/>
+      <circle cx="147" cy="218" r="26" fill="none" stroke="#F0ECD8" stroke-width="1.5" opacity="0.4"/>
+      <text x="221" y="236" font-size="40" text-anchor="middle">🔪</text>
+      <rect x="78" y="300" width="138" height="40" rx="20" fill="#F0ECD8"/>
+      <text x="147" y="325" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6B3A2A" text-anchor="middle" letter-spacing="2">CLICK HERE</text>
+      <rect x="78" y="300" width="138" height="40" rx="20" fill="transparent" style="cursor:pointer" onclick="go(3)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="slide col" id="s3">
+  <img src="foto1.jpg" style="width:340px;height:260px;object-fit:cover;border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,0.6);margin-bottom:4px;">
+  <div class="s3title">Fine Dining Ayuuuukkkkkkkkk</div>
+  <div class="s3sub">Daripada jadi wacana yakan, gassss lah jumat jadiin ke</div>
+  <div class="s3venue">PICCA STEAKROOM</div>
+</div>
+
+<!-- S4 -->
+<div class="slide" id="s4">
+  <div class="s4l">
+    <div class="s4ltitle">Fine Dining<br>Schedule</div>
+    <div class="foodbox" onclick="document.getElementById('if').click()" title="Klik upload foto">
+      <img id="fi" src="foto2.jpg" alt="" style="display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div class="fph" id="fp" style="display:none"><span>📷</span><span>UPLOAD FOTO</span></div>
+      <div class="fbadge tr">UNLIMITED FRIES</div>
+      <div class="fbadge br">Picanha MB 5</div>
+      <div class="flogo">PICCA<br>Steak Room</div>
+    </div>
+    <input type="file" id="if" accept="image/*" style="display:none" onchange="sp(this,'fi','fp')">
+  </div>
+  <div class="s4r">
+    <div class="srow"><div class="stime">17:30 · RUMAH LU YG DI TELOK GONG ITU</div><div class="sev">Jemput lu (toleransi ngaret cumen 20 menit)</div></div>
+    <div class="srow"><div class="stime">18:15 · KAMAJA</div><div class="sev">BUKBER di Matchabae sekalian lu nyobain matcha</div></div>
+    <div class="srow"><div class="stime">20:00 · PICCA STEAKROOM</div><div class="sev b">FINE DINING</div></div>
+    <div class="srow"><div class="stime">21:30 · GO HOMEEEEEE!!!!!!</div><div class="sev b">BALIKKKK!!!!!!!</div></div>
+  </div>
+</div>
+
+<!-- S5 -->
+<div class="slide col" id="s5">
+  <div class="s5title">Dress Code</div>
+  <div class="s5body">
+    <div class="s5txt">Dress code nya kayak outfit mau ngemall aja. outfit gw diantara dua itu dengan sendal seperti biasa <strong>CROCS CAPTAIN AMERICA</strong></div>
+    <div class="s5photos">
+      <div class="pol" onclick="document.getElementById('ip1').click()" title="Klik upload foto">
+        <div class="polimg" style="background:linear-gradient(135deg,#8a9ea8,#cfc0a8)">
+          <img id="pi1" src="foto3.jpg" alt="" style="display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;">
+          <div class="pph" id="pp1" style="display:none"><span>📷</span><span>UPLOAD FOTO</span></div>
+        </div>
+        <input type="file" id="ip1" accept="image/*" style="display:none" onchange="sp(this,'pi1','pp1')">
+      </div>
+      <div class="orlbl">OR</div>
+      <div class="pol" onclick="document.getElementById('ip2').click()" title="Klik upload foto">
+        <div class="polimg" style="background:linear-gradient(135deg,#a0b2c0,#e0d4c0)">
+          <img id="pi2" src="foto4.jpg" alt="" style="display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;">
+          <div class="pph" id="pp2" style="display:none"><span>📷</span><span>UPLOAD FOTO</span></div>
+        </div>
+        <input type="file" id="ip2" accept="image/*" style="display:none" onchange="sp(this,'pi2','pp2')">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S6 -->
+<div class="slide col" id="s6">
+  <div class="s6frame" onclick="document.getElementById('is6').click()" title="Klik upload foto">
+    <div class="s6bg">
+      <img id="s6i" src="foto5.jpg" alt="" style="display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      <div class="s6ph" id="s6p" style="display:none"><span>📷</span><span>KLIK UNTUK UPLOAD FOTO</span></div>
+    </div>
+    <i class="spk a">✦</i><i class="spk b">✦</i><i class="spk c">✦</i><i class="spk d">✦</i>
+    <input type="file" id="is6" accept="image/*" style="display:none" onchange="sp(this,'s6i','s6p')">
+  </div>
+  <div class="s6text">SEE U IN FRIDAY!!!!!</div>
+</div>
+
+<!-- NAV -->
+<button class="navbtn" id="nb" onclick="prev()">BACK</button>
+<button class="navbtn" id="nn" onclick="next()">NEXT</button>
+<script src="script.js"></script>
+</body>
+</html>
